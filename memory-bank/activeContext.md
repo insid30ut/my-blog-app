@@ -27,4 +27,6 @@ This file tracks the project's current status, including recent changes, current
 *   Defined routes, data model (reusing `Post.ts`), auth strategy, and file structure.
 
 ## Open Questions/Issues
-*   None at this stage of planning. Implementation details will follow.
+*   Awaiting user confirmation of the proposed plan.
+*   Specific database choice (e.g., MongoDB, PostgreSQL with Prisma) needs to be finalized.
+*   Specific UI library/framework (e.g., Tailwind CSS, Shadcn/UI) needs to be decided.

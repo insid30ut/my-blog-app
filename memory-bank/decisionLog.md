@@ -14,12 +14,17 @@ This file records architectural and implementation decisions using a list format
 *
 
 ## Implementation Details
-
-*
+*   Specific database (e.g., MongoDB, PostgreSQL) and ORM/ODM (e.g., Mongoose, Prisma) to be decided.
+*   Authentication to likely use NextAuth.js.
 ---
 [2025-06-15 12:47:54] - Designed Blog Feature Architecture
 
 ## Decision
+
+*   [2025-06-15 10:50:25] - Adopt Next.js with App Router for the new blog application.
+*   [2025-06-15 10:50:25] - Core features for MVP: User Auth (Reg/Login), Post CRUD, Post Listing & Viewing, Commenting (Create/View), Categories, Basic User Profiles.
+*   [2025-06-15 10:50:25] - Proposed directory structure (see `productContext.md` or initial plan for details).
+*   [2025-06-15 10:50:25] - Defined data models for User, Post, Comment with key attributes.
 *   The new "blog page" feature will be an extension of the existing "posts" functionality.
 *   Dedicated routes under `/blog` for public view and `/admin/blog` for management.
 *   Reuse existing `models/Post.ts` for the data model.
