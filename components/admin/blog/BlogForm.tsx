@@ -109,7 +109,7 @@ const BlogForm: React.FC<BlogFormProps> = ({ initialData, onSubmit }) => {
       >
         {loading ? 'Submitting...' : 'Save Blog Post'}
       </button>
-    </div>
+    </form>
   );
 };
 
