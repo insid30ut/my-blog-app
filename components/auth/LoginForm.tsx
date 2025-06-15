@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -8,6 +9,7 @@ const LoginForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +34,7 @@ const LoginForm: React.FC = () => {
         setSuccess(data.message || 'Login successful!');
         setEmail('');
         setPassword('');
-        // TODO: Redirect user to dashboard or main page upon successful login
+        router.push('/admin/blog');
       }
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred.');
@@ -46,7 +48,7 @@ const LoginForm: React.FC = () => {
       <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="email" style={{ display: 'block', marginBottom: '5px' }}>Email:</label>
+          <label htmlFor="email" style={{ display: 'block', marginBottom: '5px' }}>Username:</label>
           <input
             type="email"
             id="email"

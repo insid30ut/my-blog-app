@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
-import User from '../../../../models/User';
+import bcrypt from 'bcryptjs';
+import dbConnect from '../../../../../lib/dbConnect';
+import UserModel from '../../../../../models/UserModel';
 
 export async function POST(request: Request) {
   try {
@@ -10,20 +12,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'All fields are required.' }, { status: 400 });
     }
 
-    // TODO: Hash password using bcryptjs or similar library
-    // const hashedPassword = await bcrypt.hash(password, 10);
+    await dbConnect();
 
-    // Placeholder for saving user to database
-    // For now, simulate a successful user creation
-    const newUser: User = {
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new UserModel({
       username,
       email,
-      password: `hashed_${password}`, // Placeholder for hashed password
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
+      password: hashedPassword,
+    });
 
-    console.log('Simulating user registration:', newUser);
+    await newUser.save();
 
     return NextResponse.json({ message: 'User registered successfully!', user: { username: newUser.username, email: newUser.email } }, { status: 201 });
   } catch (error) {
