@@ -27,3 +27,35 @@ This file tracks the project's progress using a task list format.
 
 ## Next Steps
 *   Proceed to implementation of the blog feature based on the design plan.
+---
+Date: 6/15/2025, 2:06:16 PM (America/Chicago, UTC-5:00)
+
+**Progress Update:**
+
+Focused on/Updated the import path in the login page component:
+File: [`src/app/(auth)/login/page.tsx`](src/app/(auth)/login/page.tsx:1-1)
+Line 1:
+```typescript
+'../../../components/auth/LoginForm'
+```
+---
+---
+Date: 6/15/2025, 2:09:17 PM (America/Chicago, UTC-5:00)
+
+**Progress Update & Correction:**
+
+Corrected the import path for `LoginForm` in [`src/app/(auth)/login/page.tsx`](src/app/(auth)/login/page.tsx).
+Previous incorrect path: `'../../../components/auth/LoginForm'`
+Corrected path: `'../../../../components/auth/LoginForm'`
+This resolved a "Module not found" error.
+---
+---
+Date: 6/15/2025, 2:10:55 PM (America/Chicago, UTC-5:00)
+
+**Progress Update & Correction:**
+
+Corrected the import path for `RegisterForm` in [`src/app/(auth)/register/page.tsx`](src/app/(auth)/register/page.tsx).
+Previous incorrect path: `'../../../components/auth/RegisterForm'`
+Corrected path: `'../../../../components/auth/RegisterForm'`
+This resolved a "Module not found" error on the registration page.
+---

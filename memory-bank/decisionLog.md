@@ -35,3 +35,19 @@ This file records architectural and implementation decisions using a list format
 ## Implementation Details
 *   Refer to [`memory-bank/blog-feature-design.md`](memory-bank/blog-feature-design.md:1) for detailed file paths and component names.
 *   API endpoints for modification (`POST`, `PUT`, `DELETE`) will be under `/api/admin/blog/...` and will use `[postId]` for robustness.
+---
+Date: 6/15/2025, 2:09:17 PM (America/Chicago, UTC-5:00)
+
+**Decision:** Corrected `LoginForm` import path in `src/app/(auth)/login/page.tsx`.
+**Reason:** User feedback indicated a "Module not found" error due to an incorrect relative path (`'../../../components/auth/LoginForm'`).
+**Resolution:** Updated the path to the correct relative path (`'../../../../components/auth/LoginForm'`).
+**Affected File:** [`src/app/(auth)/login/page.tsx`](src/app/(auth)/login/page.tsx)
+---
+---
+Date: 6/15/2025, 2:10:55 PM (America/Chicago, UTC-5:00)
+
+**Decision:** Corrected `RegisterForm` import path in `src/app/(auth)/register/page.tsx`.
+**Reason:** User feedback indicated a "Module not found" error due to an incorrect relative path (`'../../../components/auth/RegisterForm'`). This was similar to an earlier issue with the login page.
+**Resolution:** Updated the path to the correct relative path (`'../../../../components/auth/RegisterForm'`).
+**Affected File:** [`src/app/(auth)/register/page.tsx`](src/app/(auth)/register/page.tsx)
+---
