@@ -24,3 +24,170 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* MycelialFunGuy Landing Page Styles */
+:root {
+  --color-earthy-brown: #8B4513;
+  --color-forest-green: #228B22;
+  --color-deep-red: #8B0000;
+  --color-orange: #FFA500;
+  --color-light-grey: #f4f4f4;
+  --color-dark-grey: #333;
+  --color-text: #333;
+  --color-background-light: #fdfdfd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-earthy-brown: #5A2D0C;
+    --color-forest-green: #1A6B1A;
+    --color-deep-red: #6B0000;
+    --color-orange: #CC8400;
+    --color-light-grey: #444;
+    --color-dark-grey: #eee;
+    --color-text: #eee;
+    --color-background-light: #222;
+  }
+}
+
+body {
+  font-family: 'Georgia', serif; /* Organic/whimsical font */
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background-light);
+}
+
+.landing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Ensure white background for content */
+}
+
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--color-forest-green);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.site-title {
+  font-family: 'Brush Script MT', cursive; /* Whimsical font */
+  font-size: 3.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .content-section {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.image-placeholder {
+  background-color: var(--color-light-grey);
+  border: 2px dashed var(--color-dark-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark-grey);
+  font-style: italic;
+  text-align: center;
+  min-height: 250px;
+  flex: 1;
+  border-radius: 8px;
+}
+
+.forest-image {
+  background-color: #d4e7d4; /* Lighter green for forest */
+}
+
+.text-block {
+  flex: 2;
+  padding: 20px;
+  background-color: var(--color-background-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.text-block h2 {
+  color: var(--color-earthy-brown);
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.gallery-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  color: var(--color-deep-red);
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mushroom-image {
+  background-color: #f0e68c; /* Khaki for mushroom placeholder */
+  min-height: 200px;
+}
+
+.footer-section {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--color-light-grey);
+  color: var(--color-dark-grey);
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .site-title {
+    font-size: 2.5em;
+  }
+
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .hero-section {
+    padding: 30px 15px;
+  }
+
+  .text-block {
+    padding: 15px;
+  }
+
+  .gallery-section h2 {
+    font-size: 1.5em;
+  }
+}
